@@ -36,7 +36,7 @@ var fields = null,
         {url: 't51.2885-15/e35/11374112_100636050288467_540410137_n.jpg?ig_cache_key=MTAzNjM3MDc5MzQ3MjY0MzY1Nw%3D%3D.2'}
     ];
 
-function salvar (text, bg) {
+function salvar (text, bg, bgStyle) {
     var items = localStorage.getItem('savedTexts'),
         arr = [];
 
@@ -48,7 +48,7 @@ function salvar (text, bg) {
         formattedDate = (date.getDay() < 9 ? '0' + date.getDay() : date.getDay()) + '/' + (date.getMonth() < 9 ? '0' + date.getMonth() : date.getMonth()) + '/' + (date.getFullYear()),
         formattedHour = (date.getHours() < 9 ? '0' + date.getHours() : date.getHours()) + ':' + (date.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()) + ':' + (date.getSeconds() < 9 ? '0' + date.getSeconds() : date.getSeconds());
 
-    arr.push({id: arr.length || 0, text: text, bg: bg, date: formattedDate + ' - ' + formattedHour});
+    arr.push({id: arr.length || 0, text: text, bg: bg, date: formattedDate + ' - ' + formattedHour, bgStyle: bgStyle});
     localStorage.setItem('savedTexts', JSON.stringify(arr));
 
     var dialogSaved = document.querySelector('#dialog-saved');
@@ -149,7 +149,7 @@ function generate () {
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
                 '<div class="mdl-card__actions mdl-card--border">'+
-               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="salvar(\'' + obj.text + '\', \'' + obj.bg + '\')">'+
+               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="salvar(\'' + obj.text + '\', \'' + obj.bg + + '\', \'' + obj.style + '\')">'+
                '         Salvar'+
                '     </a>'+
                ' </div>'+
