@@ -6,17 +6,17 @@ var fields = null,
     bgs = [
         {url: 't51.2885-15/e35/11848870_994628747298879_97269782_n.jpg?ig_cache_key=MTIwMTU5MTYyMjc2MDExNDYxOA%3D%3D.2'},
         {url: 't51.2885-15/e35/12751519_983584308345828_220372398_n.jpg?ig_cache_key=MTE5NTc0NTQ5MjU4MzI5NTIyMg%3D%3D.2'},
-        {url: 't51.2885-15/e35/12534558_1745628825658356_2103269036_n.jpg?ig_cache_key=MTE3OTkyNzUzMDc3NzU4NjUyMQ%3D%3D.2'},
-        {url: 't51.2885-15/e35/12750372_943917942360296_1563582640_n.jpg?ig_cache_key=MTE5MTMyODU2NzY2OTI3MTQ0MA%3D%3D.2'},
-        {url: 't51.2885-15/e35/12547665_816787578467538_475197688_n.jpg?ig_cache_key=MTE3Nzg0MzMxODQ5MDYzODY2OA%3D%3D.2'},
-        {url: 't51.2885-15/s750x750/sh0.08/e35/12446013_561776823999235_858563241_n.jpg?ig_cache_key=MTE1ODMwMjE5MjIwMTA4MzE4MQ%3D%3D.2'},
-        {url: 't51.2885-15/e35/12331463_146838889013946_1919484155_n.jpg?ig_cache_key=MTEzNzc3NjA0NDA2OTMzMzEwNw%3D%3D.2'},
-        {url: 't51.2885-15/e35/11925723_814441315343967_1309267185_n.jpg?ig_cache_key=MTA4NTg2OTQyNDQxNDc5NjM2OQ%3D%3D.2'},
-        {url: 't51.2885-15/e35/11821772_546844075471582_1934526757_n.jpg?ig_cache_key=MTA3NTcyMDQ2NzI5NDQzMTk1Mg%3D%3D.2'},
-        {url: 't51.2885-15/e35/11282199_1626384577600959_353918449_n.jpg?ig_cache_key=MTA0MzA4NDQwMjMyMjgxMTI2OA%3D%3D.2'},
-        {url: 't51.2885-15/e35/11421961_921110681288011_714459576_n.jpg?ig_cache_key=MTA0MTUyMTkwMDIzMzQwMzE5OQ%3D%3D.2'},
-        {url: 't51.2885-15/e35/11356738_1436300676697924_247232843_n.jpg?ig_cache_key=MTAzNDIzNzIwMjY1NDI3NjEyNQ%3D%3D.2'},
-        {url: 't51.2885-15/e15/11417401_995655620466989_230718073_n.jpg?ig_cache_key=MTAwMzAxMjkwMTY2MjA3NTQ2Nw%3D%3D.2'},
+        {url: 't51.2885-15/e35/12534558_1745628825658356_2103269036_n.jpg?ig_cache_key=MTE3OTkyNzUzMDc3NzU4NjUyMQ%3D%3D.2', style: 'background-position: center -205px'},
+        {url: 't51.2885-15/e35/12750372_943917942360296_1563582640_n.jpg?ig_cache_key=MTE5MTMyODU2NzY2OTI3MTQ0MA%3D%3D.2', style: 'background-position: center -171px'},
+        {url: 't51.2885-15/e35/12547665_816787578467538_475197688_n.jpg?ig_cache_key=MTE3Nzg0MzMxODQ5MDYzODY2OA%3D%3D.2', style: 'background-position: center -171px'},
+        {url: 't51.2885-15/s750x750/sh0.08/e35/12446013_561776823999235_858563241_n.jpg?ig_cache_key=MTE1ODMwMjE5MjIwMTA4MzE4MQ%3D%3D.2', style: 'background-position: center -111px'},
+        {url: 't51.2885-15/e35/12331463_146838889013946_1919484155_n.jpg?ig_cache_key=MTEzNzc3NjA0NDA2OTMzMzEwNw%3D%3D.2', style: 'background-position: center -200px'},
+        {url: 't51.2885-15/e35/11925723_814441315343967_1309267185_n.jpg?ig_cache_key=MTA4NTg2OTQyNDQxNDc5NjM2OQ%3D%3D.2', style: 'background-position: center -80px'},
+        {url: 't51.2885-15/e35/11821772_546844075471582_1934526757_n.jpg?ig_cache_key=MTA3NTcyMDQ2NzI5NDQzMTk1Mg%3D%3D.2', style: 'background-position: center -400px'},
+        {url: 't51.2885-15/e35/11282199_1626384577600959_353918449_n.jpg?ig_cache_key=MTA0MzA4NDQwMjMyMjgxMTI2OA%3D%3D.2', style: 'background-position: center -130px'},
+        {url: 't51.2885-15/e35/11421961_921110681288011_714459576_n.jpg?ig_cache_key=MTA0MTUyMTkwMDIzMzQwMzE5OQ%3D%3D.2', style: 'background-position: center -190px'},
+        {url: 't51.2885-15/e35/11356738_1436300676697924_247232843_n.jpg?ig_cache_key=MTAzNDIzNzIwMjY1NDI3NjEyNQ%3D%3D.2', style: 'background-position: center -190px;bacgkround-size: contain;'},
+        {url: 't51.2885-15/e15/11417401_995655620466989_230718073_n.jpg?ig_cache_key=MTAwMzAxMjkwMTY2MjA3NTQ2Nw%3D%3D.2', style: 'background-position: center -190px'},
         {url: 't51.2885-15/e15/11326816_919885188068950_81017398_n.jpg?ig_cache_key=OTk4ODY3ODA3MTc0MzcyMDYy.2'},
         {url: 't51.2885-15/e15/1391215_1125609267454414_2004086177_n.jpg?ig_cache_key=OTg2OTM0NTQwMTU4MzQ3Nzk1.2'},
         {url: 't51.2885-15/e15/11256286_1426739680968279_807293611_n.jpg?ig_cache_key=OTc5OTk0ODk1MjY4OTQ4MDg1.2'},
@@ -141,10 +141,10 @@ function generate () {
     var ramdomBg = generateRandomBg();
     var ramdom = generateRandom();
 
-    var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url};
+    var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''};
 
     var tplCard = '<div class="demo-card-wide mdl-card mdl-shadow--2dp">'+
-                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ')">'+
+                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ');' + obj.style +'">'+
                '     <h2 class="mdl-card__title-text">' + tpls[count - 1] + '</h2>'+
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
