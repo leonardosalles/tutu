@@ -28,12 +28,12 @@ var fields = null,
         {url: 't51.2885-15/e15/10424479_1395353920687074_118999648_n.jpg?ig_cache_key=NzQ4MTUyNDg2NTA5MTI3ODEy.2'},
         {url: 't51.2885-15/e15/927947_1380468345571291_498746680_n.jpg?ig_cache_key=NzA0NjUwNDA1NTY3NzY4ODA2.2'},
         {url: 't51.2885-15/e15/10009214_431781210291500_366796738_n.jpg?ig_cache_key=NjkzMDM1NTkwNjA0Nzk0NTgw.2'},
-        {url: 't51.2885-15/e35/12599304_962604513786704_603559002_n.jpg?ig_cache_key=MTIxNzQ2NzY1NjAxODc3NjI0NQ%3D%3D.2'},
+        {url: 't51.2885-15/e35/12599304_962604513786704_603559002_n.jpg?ig_cache_key=MTIxNzQ2NzY1NjAxODc3NjI0NQ%3D%3D.2', style: 'background-position: center -130px;'},
         {url: 't51.2885-15/e35/12797799_482353055287302_877847743_n.jpg?ig_cache_key=MTE5NTI2ODczODAwNjgzMTcxMA%3D%3D.2'},
-        {url: 't51.2885-15/e35/10731861_920151731410491_1183376729_n.jpg?ig_cache_key=MTE1Mzc4NTY1MDAzOTE0ODg5MA%3D%3D.2'},
-        {url: 't51.2885-15/e35/11376206_694193047381045_845652053_n.jpg?ig_cache_key=MTAzODU3MzQ2ODI2NDA5MjYxNw%3D%3D.2'},
-        {url: 't51.2885-15/e35/11352088_872303616183856_825715794_n.jpg?ig_cache_key=MTAzNjM4ODA4MjAwNzg1NTE0NA%3D%3D.2'},
-        {url: 't51.2885-15/e35/11374112_100636050288467_540410137_n.jpg?ig_cache_key=MTAzNjM3MDc5MzQ3MjY0MzY1Nw%3D%3D.2'}
+        {url: 't51.2885-15/e35/10731861_920151731410491_1183376729_n.jpg?ig_cache_key=MTE1Mzc4NTY1MDAzOTE0ODg5MA%3D%3D.2', style: 'background-position: center -80px;'},
+        {url: 't51.2885-15/e35/11376206_694193047381045_845652053_n.jpg?ig_cache_key=MTAzODU3MzQ2ODI2NDA5MjYxNw%3D%3D.2', style: 'background-position: center -140px;'},
+        {url: 't51.2885-15/e35/11352088_872303616183856_825715794_n.jpg?ig_cache_key=MTAzNjM4ODA4MjAwNzg1NTE0NA%3D%3D.2', style: 'background-position: center -140px;'},
+        {url: 't51.2885-15/e35/11374112_100636050288467_540410137_n.jpg?ig_cache_key=MTAzNjM3MDc5MzQ3MjY0MzY1Nw%3D%3D.2', style: '    background-position: center -170px;'}
     ];
 
 function salvar (text, bg, bgStyle) {
@@ -144,7 +144,7 @@ function generate () {
     var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''};
 
     var tplCard = '<div class="demo-card-wide mdl-card mdl-shadow--2dp">'+
-                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ');' + obj.style +'">'+
+                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ');' + (obj.style || '') +'">'+
                '     <h2 class="mdl-card__title-text">' + tpls[count - 1] + '</h2>'+
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
@@ -198,14 +198,14 @@ function addField () {
 
         var label = document.createElement('label');
         label.className = 'mdl-textfield__label';
-        label.attributes.for = 'item' + index;
-        label.innerHTML = 'Item ' + index + '...';
+        label.attributes.for = 'coisinha' + index;
+        label.innerHTML = 'Coisinha ' + index + '...';
 
         var input = document.createElement('input');
         input.appendChild(label);
         input.className = 'mdl-textfield__input';
         input.attributes.type = 'text';
-        input.attributes.id = 'item' + index;
+        input.attributes.id = 'coisinha' + index;
 
         div.appendChild(input);
         div.appendChild(label);
