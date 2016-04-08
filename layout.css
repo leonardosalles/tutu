@@ -10,6 +10,8 @@
 
 .results {
     text-align: center;
+    width: 512px;
+    margin: 0 auto;
 }
 
 header {
@@ -18,4 +20,41 @@ header {
 
 .mdl-layout__content {
     padding-top: 65px;
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+    margin: 20px auto;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background-position: center;
+    background-size: cover;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.demo-card-wide .mdl-card__supporting-text {
+    width: 94%;
+    background-color: #fff;
+}
+
+.demo-card-wide .mdl-card__actions {
+    background-color: #fff;
+}
+
+.historico .demo-card-wide {
+    margin: 20px auto;
+}
+
+@media all and (max-width: 768px) {
+    .results {
+        width: 100%;
+    }
+
+    .demo-card-wide.mdl-card {
+        width: 100%;
+    }
 }
