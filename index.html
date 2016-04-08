@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.pink-amber.min.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script defer src="functions.js"></script>
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Gerador de coisinha</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="javascript:void(0)" onclick="generate()">Descobir <span id="cal">Pimero</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <div class="results">
+
+        </div>
+
+        <div class="field-wrapper top-space">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="coisinha1">
+                <label class="mdl-textfield__label" for="coisinha1">Coisinha desejada 1...</label>
+            </div>
+        </div>
+
+        <div class="field-wrapper">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addField()">
+                Adicionar coisinha
+            </button>
+        </div>
+    </div>
+  </main>
+</div>
+
+<dialog class="mdl-dialog">
+    <h4>Xó xeis moi, tu que dixe!</h4>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="document.querySelector('dialog').close();">Ta bom moi</button>
+    </div>
+</dialog>
+
+<dialog class="mdl-dialog" id="dialog-length">
+    <h4>Bota os xeis pimero moi!</h4>
+
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="document.querySelector('#dialog-length').close();">Ta bom moi</button>
+    </div>
+</dialog>
+
+<dialog class="mdl-dialog" id="dialog-results">
+    <h4>Xó teis sua malandinha!</h4>
+
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="document.querySelector('#dialog-results').close();">Ta bom moi</button>
+    </div>
+</dialog>
+
+<dialog class="mdl-dialog" id="dialog-input">
+    <h4>Peenche todos os campos moi!</h4>
+
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="document.querySelector('#dialog-input').close();">Ta bom moi</button>
+    </div>
+</dialog>
+</body>
+</html>
