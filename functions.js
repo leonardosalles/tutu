@@ -76,7 +76,7 @@ function generate () {
     if (tpls[count]) {
         buttonDescobir.innerHTML = tpls[count];
     } else {
-        buttonDescobir.innerHTML = 'Poti!';
+        buttonDescobir.parentElement.innerHTML = '<span id="cal">Poti!</span>'
     }
 
     randoms.push(ramdom);
