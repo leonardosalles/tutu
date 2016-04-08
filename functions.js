@@ -3,10 +3,10 @@ var fields = null,
     randoms = [];
 
 function generateRandom () {
-    var random = Math.floor(Math.random() * 5);
+    var random = Math.floor(Math.random() * 6);
 
     while (randoms.indexOf(random) > -1) {
-        random = Math.floor(Math.random() * 5);
+        random = Math.floor(Math.random() * 6);
     }
 
     return random;
@@ -38,6 +38,11 @@ function generate () {
     }
 
     var wishList = [];
+
+    if (fields.length < 6) {
+        fields = document.querySelectorAll('.mdl-textfield');
+    }
+
     for (var i=0,n=fields.length; i<n; i++) {
         wishList.push(fields[i].querySelector('input').value);
     }
@@ -66,9 +71,12 @@ function generate () {
     var ramdom = generateRandom();
     results.innerHTML = results.innerHTML + '<h2>' + tpls[count - 1] + '</h2><h4>' + wishList[ramdom] + '</h4>';
 
+    var buttonDescobir = document.querySelector('#cal');
+
     if (tpls[count]) {
-        var buttonDescobir = document.querySelector('#cal');
         buttonDescobir.innerHTML = tpls[count];
+    } else {
+        buttonDescobir.innerHTML = 'Poti!';
     }
 
     randoms.push(ramdom);
