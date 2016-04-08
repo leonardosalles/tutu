@@ -3,10 +3,10 @@ var fields = null,
     randoms = [];
 
 function generateRandom () {
-    var random = Math.floor(Math.random() * 6);
+    var random = Math.floor(Math.random() * 5);
 
     while (randoms.indexOf(random) > -1) {
-        random = Math.floor(Math.random() * 6);
+        random = Math.floor(Math.random() * 5);
     }
 
     return random;
