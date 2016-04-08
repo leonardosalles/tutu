@@ -2,10 +2,41 @@ var fields = null,
     count = 1,
     randoms = [],
     randomsBg = [],
-    prefix = 'http://www.intrawallpaper.com',
-    bgs = ["/static/cache/f4/4a/f44af97d9d913f9f36d8aa2379837f70.jpg", "/static/cache/c3/16/c316ee0128cf6b471b894e089627c809.jpg", "/static/cache/05/d9/05d92fa09134653de06016fa13324758.jpg", "/static/cache/42/40/424036086c300f9b64a43d1bea201a33.jpg", "/static/cache/09/34/09348418b23ea1648664d5886ba87e6d.jpg", "/static/cache/84/50/845094b3217550e9f154396831084f75.jpg", "/static/cache/f2/ff/f2ffd84727b8afb9f229dcc6624082f1.jpg", "/static/cache/0b/08/0b0874a9bfd6aa777597dba3d6590901.jpg", "/static/cache/d6/3c/d63c5c77e8fec4c5c5483777dea1799e.jpg", "/static/cache/ce/7b/ce7bfe283c4790345007d5c826adcf63.jpg", "/static/cache/4a/4a/4a4ab5561ec51042729ebf641217582a.jpg", "/static/cache/5a/c9/5ac9e0838a224275cce33136ac346cf7.jpg", "/static/cache/e5/7d/e57de23d37019595789213abd6d55f68.jpg", "/static/cache/03/69/0369d384251e8965ee7efb6b706fbf1f.jpg", "/static/cache/bf/02/bf024b90e3d6cd66cef2e419897a9cda.jpg", "/static/cache/9e/d8/9ed8660adefa56a206422a9bf67dd5bd.jpg", "/static/cache/ef/06/ef068629768e1173823664f6759621c3.jpg", "/static/cache/85/5f/855f4ca141661cf9d22af576aec05573.jpg", "/static/cache/2c/37/2c37f25101f1e426605d5f112041aa27.jpg", "/static/cache/58/20/58203880499f48e93724f634d259a403.jpg", "/static/cache/0c/33/0c332346bd3805de5f6ccb2fd05d2662.jpg", "/static/cache/f6/a4/f6a467699b4a845bce18b9fd6adcce1f.jpg", "/static/cache/cd/2e/cd2e0162c1f2c784b7130e160443f9d9.jpg", "/static/cache/b6/ab/b6ab633c73613660b58d660cc0119ed6.jpg", "/static/cache/a0/12/a0129c4f5e5226c1b6144dc8ce77fa38.jpg", "/static/cache/fb/8b/fb8b121cdc1a750fee8d484e66d3795c.jpg", "/static/cache/b3/3e/b33e468022d235095b198390bd8fbcd4.jpg", "/static/cache/93/ba/93ba76382e1521023723bcd5c7e08af8.jpg", "/static/cache/dd/0a/dd0a0ba402701969670deba97f889891.jpg", "/static/cache/93/76/9376651af593f1860c0c2141ba69fb5c.jpg", "/static/cache/7d/f7/7df7dc5e032f244d48157cd729718cc5.jpg", "/static/cache/f9/d1/f9d1dda36d4f0f8aae87b0c78bc080d5.jpg", "/static/cache/ff/ed/ffed2702c596d2da12ee75c12cfe01e4.jpg", "/static/cache/ba/d1/bad15f232769c9105c86310a1ec16cf0.jpg", "/static/cache/d0/cd/d0cdafc051c38abadd2eb5015f0a83b5.jpg", "/static/cache/77/11/7711472629bbc3b3d516aaf400011b71.jpg", "/static/cache/00/14/0014ccceb254ad9accfbbb25b1142d42.jpg", "/static/cache/20/62/20623165626c4ccaafd6c3e29c99564a.jpg", "/static/cache/af/87/af87c1d75e20f943bbf941b8c471f0a0.jpg", "/static/cache/1b/f0/1bf0fb2bf7dd2b1211852f8e79224f73.jpg"];
+    prefix = 'https://scontent-atl3-1.cdninstagram.com/',
+    bgs = [
+        {url: 't51.2885-15/e35/11848870_994628747298879_97269782_n.jpg?ig_cache_key=MTIwMTU5MTYyMjc2MDExNDYxOA%3D%3D.2'},
+        {url: 't51.2885-15/e35/12751519_983584308345828_220372398_n.jpg?ig_cache_key=MTE5NTc0NTQ5MjU4MzI5NTIyMg%3D%3D.2'},
+        {url: 't51.2885-15/e35/12534558_1745628825658356_2103269036_n.jpg?ig_cache_key=MTE3OTkyNzUzMDc3NzU4NjUyMQ%3D%3D.2', style: 'background-position: center -205px'},
+        {url: 't51.2885-15/e35/12750372_943917942360296_1563582640_n.jpg?ig_cache_key=MTE5MTMyODU2NzY2OTI3MTQ0MA%3D%3D.2', style: 'background-position: center -171px'},
+        {url: 't51.2885-15/e35/12547665_816787578467538_475197688_n.jpg?ig_cache_key=MTE3Nzg0MzMxODQ5MDYzODY2OA%3D%3D.2', style: 'background-position: center -171px'},
+        {url: 't51.2885-15/s750x750/sh0.08/e35/12446013_561776823999235_858563241_n.jpg?ig_cache_key=MTE1ODMwMjE5MjIwMTA4MzE4MQ%3D%3D.2', style: 'background-position: center -111px'},
+        {url: 't51.2885-15/e35/12331463_146838889013946_1919484155_n.jpg?ig_cache_key=MTEzNzc3NjA0NDA2OTMzMzEwNw%3D%3D.2', style: 'background-position: center -200px'},
+        {url: 't51.2885-15/e35/11925723_814441315343967_1309267185_n.jpg?ig_cache_key=MTA4NTg2OTQyNDQxNDc5NjM2OQ%3D%3D.2', style: 'background-position: center -80px'},
+        {url: 't51.2885-15/e35/11821772_546844075471582_1934526757_n.jpg?ig_cache_key=MTA3NTcyMDQ2NzI5NDQzMTk1Mg%3D%3D.2', style: 'background-position: center -400px'},
+        {url: 't51.2885-15/e35/11282199_1626384577600959_353918449_n.jpg?ig_cache_key=MTA0MzA4NDQwMjMyMjgxMTI2OA%3D%3D.2', style: 'background-position: center -130px'},
+        {url: 't51.2885-15/e35/11421961_921110681288011_714459576_n.jpg?ig_cache_key=MTA0MTUyMTkwMDIzMzQwMzE5OQ%3D%3D.2', style: 'background-position: center -190px'},
+        {url: 't51.2885-15/e35/11356738_1436300676697924_247232843_n.jpg?ig_cache_key=MTAzNDIzNzIwMjY1NDI3NjEyNQ%3D%3D.2', style: 'background-position: center -190px;bacgkround-size: contain;'},
+        {url: 't51.2885-15/e15/11417401_995655620466989_230718073_n.jpg?ig_cache_key=MTAwMzAxMjkwMTY2MjA3NTQ2Nw%3D%3D.2', style: 'background-position: center -190px'},
+        {url: 't51.2885-15/e15/11326816_919885188068950_81017398_n.jpg?ig_cache_key=OTk4ODY3ODA3MTc0MzcyMDYy.2'},
+        {url: 't51.2885-15/e15/1391215_1125609267454414_2004086177_n.jpg?ig_cache_key=OTg2OTM0NTQwMTU4MzQ3Nzk1.2'},
+        {url: 't51.2885-15/e15/11256286_1426739680968279_807293611_n.jpg?ig_cache_key=OTc5OTk0ODk1MjY4OTQ4MDg1.2'},
+        {url: 't51.2885-15/e15/11123896_1424193161217284_1670120515_n.jpg?ig_cache_key=OTYzMjg1MDY4NDcxODM5NTIw.2'},
+        {url: 't51.2885-15/e15/11092993_786696368083295_390778183_n.jpg?ig_cache_key=OTYyMjc3Mjk4NDUyODAyNTQx.2'},
+        {url: 't51.2885-15/e15/10979617_929299750434152_101492164_n.jpg?ig_cache_key=OTMwNTIyNjIxOTgxOTkzOTE0.2'},
+        {url: 't51.2885-15/e15/10895089_697294260388699_2135686981_n.jpg?ig_cache_key=ODk3MjQ0MjExNzc2MzAxNDQ4.2'},
+        {url: 't51.2885-15/e15/10838294_298877550308290_291932422_n.jpg?ig_cache_key=ODgxODg0NjkzODkwNTc1MTg4.2'},
+        {url: 't51.2885-15/e15/10424479_1395353920687074_118999648_n.jpg?ig_cache_key=NzQ4MTUyNDg2NTA5MTI3ODEy.2'},
+        {url: 't51.2885-15/e15/927947_1380468345571291_498746680_n.jpg?ig_cache_key=NzA0NjUwNDA1NTY3NzY4ODA2.2'},
+        {url: 't51.2885-15/e15/10009214_431781210291500_366796738_n.jpg?ig_cache_key=NjkzMDM1NTkwNjA0Nzk0NTgw.2'},
+        {url: 't51.2885-15/e35/12599304_962604513786704_603559002_n.jpg?ig_cache_key=MTIxNzQ2NzY1NjAxODc3NjI0NQ%3D%3D.2', style: 'background-position: center -130px;'},
+        {url: 't51.2885-15/e35/12797799_482353055287302_877847743_n.jpg?ig_cache_key=MTE5NTI2ODczODAwNjgzMTcxMA%3D%3D.2'},
+        {url: 't51.2885-15/e35/10731861_920151731410491_1183376729_n.jpg?ig_cache_key=MTE1Mzc4NTY1MDAzOTE0ODg5MA%3D%3D.2', style: 'background-position: center -80px;'},
+        {url: 't51.2885-15/e35/11376206_694193047381045_845652053_n.jpg?ig_cache_key=MTAzODU3MzQ2ODI2NDA5MjYxNw%3D%3D.2', style: 'background-position: center -140px;'},
+        {url: 't51.2885-15/e35/11352088_872303616183856_825715794_n.jpg?ig_cache_key=MTAzNjM4ODA4MjAwNzg1NTE0NA%3D%3D.2', style: 'background-position: center -140px;'},
+        {url: 't51.2885-15/e35/11374112_100636050288467_540410137_n.jpg?ig_cache_key=MTAzNjM3MDc5MzQ3MjY0MzY1Nw%3D%3D.2', style: '    background-position: center -170px;'}
+    ];
 
-function salvar (text, bg) {
+function salvar (text, bg, bgStyle) {
     var items = localStorage.getItem('savedTexts'),
         arr = [];
 
@@ -17,7 +48,7 @@ function salvar (text, bg) {
         formattedDate = (date.getDay() < 9 ? '0' + date.getDay() : date.getDay()) + '/' + (date.getMonth() < 9 ? '0' + date.getMonth() : date.getMonth()) + '/' + (date.getFullYear()),
         formattedHour = (date.getHours() < 9 ? '0' + date.getHours() : date.getHours()) + ':' + (date.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()) + ':' + (date.getSeconds() < 9 ? '0' + date.getSeconds() : date.getSeconds());
 
-    arr.push({id: arr.length || 0, text: text, bg: bg, date: formattedDate + ' - ' + formattedHour});
+    arr.push({id: arr.length || 0, text: text, bg: bg, date: formattedDate + ' - ' + formattedHour, bgStyle: bgStyle});
     localStorage.setItem('savedTexts', JSON.stringify(arr));
 
     var dialogSaved = document.querySelector('#dialog-saved');
@@ -39,10 +70,10 @@ function generateRandom () {
 }
 
 function generateRandomBg () {
-    var random = Math.floor(Math.random() * 41);
+    var random = Math.floor(Math.random() * 31);
 
     while (randomsBg.indexOf(random) > -1) {
-        random = Math.floor(Math.random() * 41);
+        random = Math.floor(Math.random() * 31);
     }
 
     return random;
@@ -110,15 +141,15 @@ function generate () {
     var ramdomBg = generateRandomBg();
     var ramdom = generateRandom();
 
-    var obj = {text: wishList[ramdom], bg: bgs[ramdomBg]};
+    var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''};
 
     var tplCard = '<div class="demo-card-wide mdl-card mdl-shadow--2dp">'+
-                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ')">'+
+                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ');' + (obj.style || '') +'">'+
                '     <h2 class="mdl-card__title-text">' + tpls[count - 1] + '</h2>'+
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
                 '<div class="mdl-card__actions mdl-card--border">'+
-               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="salvar(\'' + obj.text + '\', \'' + obj.bg + '\')">'+
+               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="salvar(\'' + obj.text + '\', \'' + obj.bg + + '\', \'' + obj.style + '\')">'+
                '         Salvar'+
                '     </a>'+
                ' </div>'+
@@ -167,14 +198,14 @@ function addField () {
 
         var label = document.createElement('label');
         label.className = 'mdl-textfield__label';
-        label.attributes.for = 'item' + index;
-        label.innerHTML = 'Item ' + index + '...';
+        label.attributes.for = 'coisinha' + index;
+        label.innerHTML = 'Coisinha ' + index + '...';
 
         var input = document.createElement('input');
         input.appendChild(label);
         input.className = 'mdl-textfield__input';
         input.attributes.type = 'text';
-        input.attributes.id = 'item' + index;
+        input.attributes.id = 'coisinha' + index;
 
         div.appendChild(input);
         div.appendChild(label);
