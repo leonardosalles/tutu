@@ -12,7 +12,7 @@ var fields = null,
         {url: 't51.2885-15/s750x750/sh0.08/e35/12446013_561776823999235_858563241_n.jpg?ig_cache_key=MTE1ODMwMjE5MjIwMTA4MzE4MQ%3D%3D.2', style: 'background-position: center -111px'},
         {url: 't51.2885-15/e35/12331463_146838889013946_1919484155_n.jpg?ig_cache_key=MTEzNzc3NjA0NDA2OTMzMzEwNw%3D%3D.2', style: 'background-position: center -200px'},
         {url: 't51.2885-15/e35/11925723_814441315343967_1309267185_n.jpg?ig_cache_key=MTA4NTg2OTQyNDQxNDc5NjM2OQ%3D%3D.2', style: 'background-position: center -80px'},
-        {url: 't51.2885-15/e35/11821772_546844075471582_1934526757_n.jpg?ig_cache_key=MTA3NTcyMDQ2NzI5NDQzMTk1Mg%3D%3D.2', style: 'background-position: center -400px'},
+        {url: 't51.2885-15/e35/11821772_546844075471582_1934526757_n.jpg?ig_cache_key=MTA3NTcyMDQ2NzI5NDQzMTk1Mg%3D%3D.2', style: 'background-position: center -290px'},
         {url: 't51.2885-15/e35/11282199_1626384577600959_353918449_n.jpg?ig_cache_key=MTA0MzA4NDQwMjMyMjgxMTI2OA%3D%3D.2', style: 'background-position: center -130px'},
         {url: 't51.2885-15/e35/11421961_921110681288011_714459576_n.jpg?ig_cache_key=MTA0MTUyMTkwMDIzMzQwMzE5OQ%3D%3D.2', style: 'background-position: center -190px'},
         {url: 't51.2885-15/e35/11356738_1436300676697924_247232843_n.jpg?ig_cache_key=MTAzNDIzNzIwMjY1NDI3NjEyNQ%3D%3D.2', style: 'background-position: center -190px;bacgkround-size: contain;'},
@@ -144,7 +144,7 @@ function generate () {
     var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''};
 
     var tplCard = '<div class="demo-card-wide mdl-card mdl-shadow--2dp">'+
-                    '<div class="mdl-card__title" style="background-image: url(' + prefix + obj.bg + ');' + (obj.style || '') +'">'+
+                    '<div class="mdl-card__title" style="background-image: url(' + obj.bg + ');' + obj.style + '">'+
                '     <h2 class="mdl-card__title-text">' + tpls[count - 1] + '</h2>'+
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
