@@ -28,7 +28,7 @@ var fields = null,
         {url: 't51.2885-15/e15/10424479_1395353920687074_118999648_n.jpg?ig_cache_key=NzQ4MTUyNDg2NTA5MTI3ODEy.2'},
         {url: 't51.2885-15/e15/927947_1380468345571291_498746680_n.jpg?ig_cache_key=NzA0NjUwNDA1NTY3NzY4ODA2.2'},
         {url: 't51.2885-15/e15/10009214_431781210291500_366796738_n.jpg?ig_cache_key=NjkzMDM1NTkwNjA0Nzk0NTgw.2'},
-        {url: 't51.2885-15/e35/12599304_962604513786704_603559002_n.jpg?ig_cache_key=MTIxNzQ2NzY1NjAxODc3NjI0NQ%3D%3D.2', style: 'background-position: center -130px;'},
+        {url: 't51.2885-15/e35/12599304_962604513786704_603559002_n.jpg?ig_cache_key=MTIxNzQ2NzY1NjAxODc3NjI0NQ%3D%3D.2', style: 'background-position: center -200px;'},
         {url: 't51.2885-15/e35/12797799_482353055287302_877847743_n.jpg?ig_cache_key=MTE5NTI2ODczODAwNjgzMTcxMA%3D%3D.2'},
         {url: 't51.2885-15/e35/10731861_920151731410491_1183376729_n.jpg?ig_cache_key=MTE1Mzc4NTY1MDAzOTE0ODg5MA%3D%3D.2', style: 'background-position: center -80px;'},
         {url: 't51.2885-15/e35/11376206_694193047381045_845652053_n.jpg?ig_cache_key=MTAzODU3MzQ2ODI2NDA5MjYxNw%3D%3D.2', style: 'background-position: center -140px;'},
@@ -138,10 +138,10 @@ function generate () {
         'Teceru'
     ];
 
-    var ramdomBg = generateRandomBg();
-    var ramdom = generateRandom();
-
-    var obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''};
+    var ramdomBg = generateRandomBg(),
+        ramdom = generateRandom(),
+        obj = {text: wishList[ramdom], bg: prefix + bgs[ramdomBg].url, style: bgs[ramdomBg].style || ''},
+        saveStr = "salvar('" + obj.text + "', '" + obj.bg + "', '" + obj.style + "')";
 
     var tplCard = '<div class="demo-card-wide mdl-card mdl-shadow--2dp">'+
                     '<div class="mdl-card__title" style="background-image: url(' + obj.bg + ');' + obj.style + '">'+
@@ -149,7 +149,7 @@ function generate () {
                 '</div>'+
                 '<div class="mdl-card__supporting-text">' + obj.text + '</div>'+
                 '<div class="mdl-card__actions mdl-card--border">'+
-               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="salvar(\'' + obj.text + '\', \'' + obj.bg + + '\', \'' + obj.style + '\')">'+
+               '     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="' + saveStr + '">'+
                '         Salvar'+
                '     </a>'+
                ' </div>'+
